@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean id="jw" class="com.cognizant.moviecruiser.model.Movie">
+	<property name="id" value="1" />
+	<property name="title" value="John Wick" />
+	<property name="boxOffice" value="99" />
+	<property name="active" value="true" />
+	<property name="dateOfLaunch" value="15/03/2017" />
+	<property name="genre">
+		<list>
+			<value>Action</value>
+			<value>Thriller</value>
+			<value>Adventure</value>
+		</list>
+	</property>
+</bean>
+
+<bean id="rm" class="com.cognizant.moviecruiser.model.Movie">
+	<property name="id" value="2" />
+	<property name="title" value="Rampage" />
+	<property name="boxOffice" value="50"/>
+	<property name="active" value="true" />
+	<property name="dateOfLaunch" value="07/05/2019" />
+	<property name="genre">
+		<list>
+			<value>Action</value>
+			<value>Thriller</value>
+			<value>Adventure</value>
+			<value>Science Fiction</value>
+		</list>
+	</property>
+</bean>
+
+<bean id="tnt" class="com.cognizant.moviecruiser.model.Movie">
+	<property name="id" value="3" />
+	<property name="title" value="T.E.N.E.T" />
+	<property name="boxOffice" value="0" />
+	<property name="active" value="false" />
+	<property name="dateOfLaunch" value="31/07/2020" />
+	<property name="genre">
+		<list>
+			<value>Science Fiction</value>
+		</list>
+	</property>
+</bean>
+
+<bean id="gog" class="com.cognizant.moviecruiser.model.Movie">
+	<property name="id" value="4" />
+	<property name="title" value="Gaurdian Of Galaxy" />
+	<property name="boxOffice" value="150" />
+	<property name="active" value="true" />
+	<property name="dateOfLaunch" value="24/09/2018" />
+	<property name="genre">
+		<list>
+			<value>Action</value>
+			<value>Thriller</value>
+			<value>Adventure</value>
+			<value>Comedy</value>
+		</list>
+	</property>
+</bean>
+
+
+<bean id="movieList" class="java.util.ArrayList">
+	<constructor-arg>
+		<list>
+			<ref bean="rm" />
+			<ref bean="gog" />
+			<ref bean="tnt" />
+			<ref bean="jw" />
+		</list>
+	</constructor-arg>
+</bean>
+</beans>
